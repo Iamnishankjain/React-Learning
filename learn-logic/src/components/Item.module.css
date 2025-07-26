@@ -1,0 +1,11 @@
+.list-of-item{
+    background: rgb(136, 135, 222);
+    margin: 2px;
+}
+.item-span{
+    color: rgb(223, 214, 215);
+    text-transform: capitalize;
+}
+.button{
+    float: right;
+}
