@@ -1,0 +1,92 @@
+h1 {
+  text-align: center;
+  color: rebeccapurple;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.main-div {
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: #f8f8f8;
+  color: black;
+}
+
+.take-input {
+  margin: 20px 0 0 0;
+  height: 45px;
+  width: 100%;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+  width: 100%;
+}
+
+.btn {
+  width: 60px;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: indigo;
+}
+
+/* -------------------- Responsive Media Queries -------------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .main-div {
+    width: 60%;
+    margin: 20px auto;
+  }
+
+  .btn {
+    width: 55px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  .take-input {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .main-div {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .btn {
+    width: 50px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .take-input {
+    font-size: 0.9rem;
+  }
+}
