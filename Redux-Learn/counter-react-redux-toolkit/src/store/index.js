@@ -19,11 +19,23 @@ const counterSlice = createSlice({
     },
 });
 
+const privacySlice = createSlice({
+    name:"privacy",
+    initialState: false,
+    reducers: {
+        toggle: (state) =>{
+            return state = !state;
+        }
+    }
+});
+
 const counterStore = configureStore({reducer:{
-    counter: counterSlice.reducer
+    counter: counterSlice.reducer,
+    privacy: privacySlice.reducer,
 }});
 
 export const counterAction=counterSlice.actions;
+export const privacyAction=privacySlice.actions;
 export default counterStore;
 
 

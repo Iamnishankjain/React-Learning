@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 import PrivacyMsg from "./components/PrivacyMsg";
 function App() {
 
-  const privacy=useSelector((store)=>store.Privacy);
+  const privacy=useSelector((store)=>store.privacy);
 
   return (
     <>

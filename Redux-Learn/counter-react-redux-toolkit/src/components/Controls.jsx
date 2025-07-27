@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { counterAction } from '../store';
+import { counterAction, privacyAction } from '../store';
 
 const Controls = () => {
   const dispatch=useDispatch();
@@ -15,7 +15,7 @@ const Controls = () => {
   };
 
   const handlePrivacyToggle=()=>{
-    dispatch({type: "PrivacyToggle"});
+    dispatch(privacyAction.toggle());
   }
 
   const handleAdd=()=>{
