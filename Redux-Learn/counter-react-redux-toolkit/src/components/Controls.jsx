@@ -19,11 +19,11 @@ const Controls = () => {
   }
 
   const handleAdd=()=>{
-    dispatch(counterAction.add({value: inputValue.current.value,}));
+    dispatch(counterAction.add(inputValue.current.value));
     inputValue.current.value="";
   };
   const handleSub=()=>{
-    dispatch(counterAction.sub({value: inputValue.current.value,}));
+    dispatch(counterAction.sub(inputValue.current.value));
     inputValue.current.value="";
   };
 
