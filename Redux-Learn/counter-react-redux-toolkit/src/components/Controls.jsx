@@ -1,16 +1,17 @@
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
+import { counterAction } from '../store';
 
 const Controls = () => {
+  const dispatch=useDispatch();
   const inputValue=useRef();
-  const dispatch = useDispatch();
 
   const handleIncrement=()=>{
-    dispatch({type: "INCREMENT"});
+    dispatch(counterAction.increment());
   }
 
   const handleDecrement=()=>{
-    dispatch({type: "DECREMENT"});
+    dispatch(counterAction.decrement());
   };
 
   const handlePrivacyToggle=()=>{
@@ -18,15 +19,11 @@ const Controls = () => {
   }
 
   const handleAdd=()=>{
-    dispatch({type: "ADD",payload: {
-      value: inputValue.current.value,
-    }});
+    dispatch(counterAction.add({value: inputValue.current.value,}));
     inputValue.current.value="";
   };
   const handleSub=()=>{
-    dispatch({type: "SUB",payload: {
-      value: inputValue.current.value,
-    }});
+    dispatch(counterAction.sub({value: inputValue.current.value,}));
     inputValue.current.value="";
   };
 
